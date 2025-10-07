@@ -1,0 +1,14 @@
+export { default as ArrayDownIcon } from './ArrayDown';
+export { default as BurgerIcon } from './Burger';
+export { default as ChartInnerLayerIcon } from './ChartInnerLayer';
+export { default as ChartTopLayerIcon } from './ChartTopLayer';
+export { default as CloseIcon } from './Close';
+export { default as DiscordIcon } from './Discord';
+export { default as LinkWhiteIcon } from './LinkWhite';
+export { default as LinkIcon } from './Link';
+export { default as LocaleIcon } from './Locale';
+export { default as NextIcon } from './Next';
+export { default as PrevIcon } from './Prev';
+export { default as StarIcon } from './Star';
+export { default as TelegramIcon } from './Telegram';
+export { default as TwitterIcon } from './Twitter';

@@ -1,0 +1,54 @@
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(7, 11, 35, 0.95);
+
+  display: none;
+  padding: 185px 20px 75px;
+  flex-direction: column;
+
+  @include tabletLg {
+    display: flex;
+  }
+
+  @include mobile {
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+
+  &--links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 45px;
+    flex: 1;
+
+    a {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #97b1cf;
+
+      &.active {
+        color: #fff;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+}

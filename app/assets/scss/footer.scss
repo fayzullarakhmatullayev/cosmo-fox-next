@@ -1,0 +1,74 @@
+.footer {
+  width: 100%;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+  &::after {
+    content: "";
+    width: 100%;
+    display: block;
+    background: linear-gradient(180deg, rgba(0, 1, 10, 0), rgba(0, 1, 10, 1));
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  @include tabletLg {
+    display: none;
+  }
+  &__wrapper {
+    width: 100%;
+    padding: 21px 19px 20px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+
+    @include laptopH {
+      padding: 12px;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include laptop {
+      gap: 30px;
+    }
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 7px;
+      span {
+        font-size: 14px;
+      }
+
+      @include laptopH {
+        zoom: 0.8;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    a {
+      font-size: 20px;
+    }
+
+    @include laptop {
+      gap: 30px;
+    }
+  }
+}

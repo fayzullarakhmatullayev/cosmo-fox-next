@@ -1,0 +1,62 @@
+.swiper__container {
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-top-offset: 26%;
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    animation: moveLeft 2s linear infinite;
+  }
+
+  .swiper-button-next {
+    animation: moveRight 2s linear infinite;
+  }
+
+  .swiper-pagination-bullet {
+    background: url("/images/star.png") center no-repeat;
+    background-size: contain;
+    width: 17px;
+    height: 17px;
+    opacity: 1 !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: url("/images/star-active.png") center no-repeat;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-15px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

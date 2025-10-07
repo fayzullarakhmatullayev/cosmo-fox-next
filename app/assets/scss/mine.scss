@@ -1,0 +1,283 @@
+.mine {
+  padding: 166px 0 156px;
+  min-height: 100dvh;
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  @include laptopH {
+    padding-top: 120px;
+  }
+
+  @include laptop {
+    padding-top: 120px;
+  }
+
+  @include mobile {
+    min-height: 100dvh;
+    padding-bottom: 30px;
+    padding-top: 100px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 360px);
+    justify-content: center;
+    gap: 70px;
+
+    @include laptopH {
+      grid-template-columns: repeat(4, 300px);
+      gap: 30px;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(4, 300px);
+      gap: 30px;
+    }
+    @include laptopN {
+      grid-template-columns: repeat(4, 260px);
+      gap: 30px;
+    }
+
+    @include tabletLg {
+      display: none;
+    }
+
+    .mine__card--title {
+      @include laptop {
+        font-size: 20px;
+      }
+
+      @include laptopH {
+        font-size: 20px;
+      }
+
+      @include laptopN {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .mine__card--list {
+      @include laptop {
+        gap: 16px;
+      }
+      @include laptopH {
+        gap: 16px;
+      }
+
+      li {
+        @include laptop {
+          font-size: 18px;
+        }
+
+        @include laptopH {
+          font-size: 18px;
+        }
+
+        @include laptopN {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .mine__card--picture {
+      @include laptop {
+        width: 240px;
+        height: 280px;
+      }
+
+      @include laptopH {
+        width: 240px;
+        height: 280px;
+      }
+    }
+    .mine__card--picture {
+      @include laptopN {
+        zoom: 0.9;
+      }
+    }
+    .mine__card--image {
+      @include laptop {
+        transform: translate(-50%, -25%) scale(1);
+        top: 25% !important;
+      }
+
+      @include laptopH {
+        transform: translate(-50%, -25%) scale(1);
+        top: 25% !important;
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1320px) {
+      max-width: 360px;
+      min-height: 750px;
+      padding-bottom: 26px;
+    }
+
+    @include mobile {
+      min-height: 682px;
+    }
+
+    &.on-top {
+      .mine__card--content {
+        order: 2;
+      }
+      .mine__card--picture {
+        order: 1;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: 20px;
+
+        @media (max-width: 1320px) {
+          margin: 0 auto 54px;
+        }
+      }
+
+      .mine__card--image {
+        img {
+          animation: upDown 2s ease-in-out infinite;
+          -webkit-animation: upDown 2s ease-in-out infinite;
+        }
+      }
+    }
+    &.on-bottom {
+      .mine__card--content {
+        order: 1;
+      }
+      .mine__card--picture {
+        order: 2;
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: 20px;
+
+        @include laptopN {
+          margin-top: 25px;
+        }
+      }
+      .mine__card--image {
+        img {
+          animation: downUp 2s ease-in-out infinite;
+          -webkit-animation: downUp 2s ease-in-out infinite;
+        }
+      }
+    }
+
+    &--picture {
+      position: relative;
+      width: 309px;
+      height: 364px;
+    }
+
+    &--slot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--image {
+      position: absolute;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scale(1.5);
+    }
+
+    &--title {
+      font-size: 25px;
+      line-height: 1.1;
+      text-align: center;
+      color: #37dd97;
+      font-weight: 400;
+      margin-bottom: 30px;
+
+      @media (max-width: 1320px) {
+        margin-bottom: 21px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include mobile {
+        max-width: 295px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      li {
+        font-family: var(--font-overpass);
+        font-size: 20px;
+        line-height: 1.1;
+        color: #fff;
+
+        letter-spacing: -0.8px;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &--2 {
+      &.on-bottom .mine__card--picture {
+        margin-top: 64px;
+
+        @include laptopN {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  &__swiper {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    @include tabletLg {
+      display: block;
+    }
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes downUp {
+  0% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+}

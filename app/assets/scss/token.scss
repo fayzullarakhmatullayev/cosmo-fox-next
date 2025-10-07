@@ -1,0 +1,551 @@
+.token {
+  padding: 166px 0 100px;
+  min-height: 100dvh;
+
+  @include laptopH {
+    padding: 120px 0;
+  }
+
+  @include mobile {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+
+    @include mobile {
+      margin-bottom: 66px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 100px;
+
+    @include laptop {
+      grid-template-columns: repeat(4, 240px);
+      gap: 30px;
+    }
+
+    @include laptopH {
+      grid-template-columns: repeat(4, 240px);
+      gap: 30px;
+    }
+
+    @include tabletLg {
+      display: none;
+    }
+
+    .token__card {
+      @include laptop {
+        min-height: 320px;
+      }
+
+      @include laptopH {
+        min-height: 320px;
+      }
+    }
+
+    .token__card--image {
+      @include laptop {
+        max-height: 100px;
+        min-height: 100px;
+      }
+
+      @include laptopH {
+        max-height: 100px;
+        min-height: 100px;
+      }
+    }
+
+    .token__card--text {
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include laptopH {
+        font-size: 18px;
+      }
+    }
+
+    .token__card--content {
+      @include laptop {
+        gap: 25px;
+      }
+
+      @include laptopH {
+        gap: 25px;
+      }
+    }
+  }
+
+  &__swiper {
+    display: none;
+    position: relative;
+    left: -16px;
+    right: -16px;
+
+    width: calc(100% + 32px);
+    max-width: 800px;
+    margin: 0 auto 57px;
+    @include tabletLg {
+      display: block;
+    }
+
+    .swiper-slide {
+      min-height: 500px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      --swiper-navigation-top-offset: 39%;
+    }
+  }
+
+  &__card {
+    position: relative;
+
+    @include tabletLg {
+      max-width: 278px;
+      width: 100%;
+      height: 386px;
+    }
+
+    &--bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--content {
+      width: 100%;
+      height: 100%;
+      padding: 39px 26px 43px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 38px;
+      z-index: 5;
+      position: relative;
+    }
+
+    &--image {
+      width: auto;
+      max-height: 138px;
+      min-height: 138px;
+      object-fit: contain;
+    }
+
+    &--text {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+  }
+  &__button {
+    width: fit-content;
+    margin: 0 auto;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      svg {
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    @include mobile {
+      padding: 19px 27px 19px !important;
+      span {
+        font-size: 20px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.token-charts {
+  padding: 134px 67px 210px;
+
+  max-width: 1684px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include laptopN {
+    padding: 134px 20px 210px;
+  }
+
+  @include mobile {
+    padding: 30px 0 150px;
+  }
+
+  .title {
+    margin-bottom: 78px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  .charts__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 95px;
+
+    @include laptop {
+      gap: 30px;
+    }
+
+    @include laptopH {
+      gap: 30px;
+    }
+
+    @include tabletLg {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 25px;
+    }
+  }
+
+  .table-container {
+    width: 100%;
+    min-height: 536px;
+    height: 100%;
+
+    position: relative;
+
+    @include laptopN {
+      min-height: auto;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 108px;
+      height: 96px;
+      z-index: 5;
+    }
+
+    &::after {
+      background: url("/images/token/token-border-r.png") center no-repeat;
+      top: -3px;
+      right: -4px;
+    }
+    &::before {
+      background: url("/images/token/token-border-l.png") center no-repeat;
+
+      bottom: -3px;
+      left: -4px;
+    }
+
+    @include tabletSm {
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 34px;
+        height: 34px;
+      }
+
+      &::after {
+        background: url("/images/token/token-border-right-mobile.png") center no-repeat;
+        top: -1px;
+        right: -2px;
+      }
+      &::before {
+        background: url("/images/token/token-border-left-mobile.png") center no-repeat;
+        bottom: -1px;
+        left: -2px;
+      }
+    }
+
+    @include mobile {
+      min-height: auto;
+    }
+
+    .token-border {
+      position: absolute;
+      width: unset;
+
+      @include tabletSm {
+        display: none;
+      }
+
+      &-left {
+        bottom: -4px;
+        left: -4px;
+        height: calc(100% + 8px);
+      }
+
+      &-right {
+        top: -4px;
+        right: -4px;
+        height: calc(100% + 7px);
+      }
+    }
+
+    .table-inner {
+      --clip-width: 66px;
+      width: 100%;
+      min-height: 536px;
+      height: 100%;
+      clip-path: polygon(
+        0% 0%,
+        /* top-left corner */ calc(100% - var(--clip-width)) 0%,
+        /* top edge, cut before top-right */ 100% var(--clip-width),
+        /* cut in top-right */ 100% 100%,
+        /* bottom-right corner */ var(--clip-width) 100%,
+        /* bottom edge, cut before bottom-left */ 0% calc(100% - var(--clip-width)) /* cut in bottom-left */
+      );
+
+      background-color: rgba(4, 43, 78, 0.5);
+      border: 3px solid #37dd97;
+
+      @include mobile {
+        min-height: auto;
+      }
+
+      // @media (max-width: 1270px) {
+      //   --clip-width: 60px;
+      // }
+
+      @include tabletSm {
+        --clip-width: 18px;
+      }
+
+      @include laptopN {
+        min-height: auto;
+      }
+    }
+
+    .token-border-full {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+    }
+
+    .table {
+      width: 100%;
+      height: 100%;
+      color: #ffffff;
+      font-weight: 400;
+
+      border: none;
+      border-collapse: collapse;
+
+      tr.active {
+        position: relative;
+        background-color: rgba(55, 221, 151, 0.2);
+      }
+
+      thead {
+        background-color: rgba(37, 60, 111, 0.8);
+
+        th {
+          padding: 29px 24px 28px;
+          text-align: left;
+          font-weight: 400;
+          font-size: 20px;
+          color: #fff;
+          line-height: 1.1;
+
+          &:nth-child(1) {
+            padding-left: 54px !important;
+          }
+          &:nth-child(2) {
+            text-align: center;
+            white-space: nowrap;
+          }
+
+          @include laptop {
+            padding: 15px 18px;
+
+            &:nth-child(2) {
+              padding-left: 24px;
+              padding-top: 24px;
+              padding-top: 14px !important;
+              white-space: nowrap;
+            }
+          }
+
+          @include laptopH {
+            font-size: 18px;
+          }
+
+          @include mobile {
+            font-size: 12px;
+
+            &:nth-child(2) {
+              padding: 11px 0 16px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr:first-child td {
+          padding-top: 8px !important;
+          height: 0;
+        }
+
+        td {
+          font-family: var(--font-overpass);
+          font-size: 20px;
+          line-height: 1.1;
+          font-weight: 400;
+          padding: 12.5px 0;
+
+          @include laptopH {
+            font-size: 18px;
+          }
+
+          @include mobile {
+            vertical-align: top;
+            font-size: 10px;
+            padding: 10px 0;
+          }
+        }
+
+        .table-color {
+          max-width: 25px;
+          width: 100%;
+          height: 25px;
+          &-wrapper {
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
+            gap: 34px;
+
+            @include laptop {
+              gap: 20px;
+            }
+          }
+
+          @include mobile {
+            max-width: 12px;
+            height: 12px;
+            &-wrapper {
+              padding-left: 11px;
+              gap: 10px;
+            }
+          }
+        }
+
+        .table-tokens {
+          text-align: center;
+        }
+        .table-vesting {
+          padding-left: 24px;
+          padding-right: 10px;
+
+          @include mobile {
+            padding-left: 18px;
+          }
+        }
+
+        .top-border {
+          @include laptopN {
+            td {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .chart-container {
+    max-width: 391px;
+    width: 100%;
+    height: 391px;
+    border-radius: 50%;
+
+    background-color: rgba(69, 184, 241, 0.2);
+
+    position: relative;
+
+    @include mobile {
+      max-width: 197px;
+      height: 197px;
+    }
+
+    .chart-top-layer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 364px;
+      height: 364px;
+      transform: translate(-50%, -50%);
+
+      svg {
+        animation: rotate 5s linear infinite;
+        -webkit-animation: rotate 5s linear infinite;
+      }
+
+      @include mobile {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    .chart-inner-layer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 180px;
+      height: 180px;
+
+      @include mobile {
+        width: 88px;
+        height: 88px;
+      }
+    }
+
+    .chart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .vue-apexcharts {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,162 @@
+.partners {
+  padding: 169px 0 300px 55px;
+  min-height: 100dvh;
+
+  @include mobile {
+    padding: 103px 0 30px;
+  }
+  .title {
+    margin-bottom: 106px;
+
+    @include laptopSm {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 328px);
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 106px;
+
+    @include laptop {
+      grid-template-columns: repeat(4, 260px);
+      gap: 30px;
+    }
+    @include laptopSm {
+      grid-template-columns: repeat(2, 260px);
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 129px);
+      gap: 25px 35px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__card {
+    height: 158px;
+    position: relative;
+    @include laptop {
+      height: 130px;
+    }
+
+    @include mobile {
+      height: 68px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--slot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include mobile {
+        transform: scaleX(-1);
+      }
+    }
+
+    &--image {
+      position: relative;
+      z-index: 5;
+      width: auto;
+      object-fit: contain;
+
+      @include laptop {
+        scale: 0.8;
+      }
+      @include mobile {
+        scale: 0.4;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+
+    @include laptop {
+      gap: 60px;
+    }
+
+    @include laptopSm {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 37px 68px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 25px;
+      color: #fff;
+      text-decoration: underline;
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      @include laptop {
+        font-size: 20px;
+        gap: 6px;
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      @include laptopSm {
+        justify-content: center;
+      }
+
+      @include mobile {
+        font-size: 14px;
+
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: none;
+    @include tabletLg {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+    }
+
+    @include mobile {
+      gap: 37px;
+      .footer__social--item {
+        gap: 9px;
+        zoom: 1;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

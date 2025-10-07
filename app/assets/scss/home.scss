@@ -1,0 +1,192 @@
+.hero {
+  // background: url("/images/home-bg.jpg") no-repeat center center / cover;
+  position: relative;
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &.fast {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-90deg, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7) 60%);
+
+      @include tabletLg {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7) 60%);
+      }
+    }
+  }
+
+  min-height: 100vh;
+}
+
+.home {
+  padding: 325px 0 160px;
+
+  @include tabletLg {
+    padding: 0 0 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: calc(100dvh - 105px);
+  }
+
+  @include laptop {
+    padding: 130px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    max-width: 640px;
+    width: 100%;
+    margin-left: 65px;
+    z-index: 10;
+    position: relative;
+
+    @include laptopN {
+      margin-left: 0;
+    }
+
+    @include tabletLg {
+      margin: 0 auto;
+    }
+  }
+  &__video {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    @include laptop {
+      height: 120px;
+    }
+    video {
+      background: transparent !important;
+      background-color: transparent !important;
+
+      border: none;
+      outline: none;
+
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(3.5);
+
+      display: block;
+
+      &::-webkit-media-controls {
+        display: none !important;
+      }
+
+      &::-webkit-media-controls-panel {
+        display: none !important;
+      }
+      @include tabletLg {
+        transform: translate(-50%, -50%) scale(2.6);
+      }
+
+      @include laptop {
+        transform: translate(-50%, -50%) scale(2.6);
+      }
+
+      @include mobile {
+        top: 71%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 1.1;
+    margin-bottom: 35px;
+    white-space: pre-line;
+    @include laptop {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-bottom: 35px;
+    margin-left: -13px;
+
+    @include tabletLg {
+      margin-left: 0;
+      gap: 20px;
+    }
+
+    @include mobile {
+      gap: 14px;
+
+      max-width: 290px;
+      width: 100%;
+      align-items: center;
+      margin: 0 auto 17px;
+    }
+
+    li {
+      font-family: var(--font-overpass);
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(194, 211, 230, 1);
+      white-space: pre-line;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 1.1;
+        &:not(:first-child) {
+          white-space: unset;
+        }
+      }
+    }
+  }
+
+  &__button {
+    max-width: 300px;
+    margin: 0 auto;
+    @include tabletLg {
+      max-width: 250px;
+    }
+
+    @include mobile {
+      font-size: 18px !important;
+      padding: 15px 15px 19px !important;
+      max-width: 165px;
+    }
+  }
+}

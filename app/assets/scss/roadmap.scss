@@ -1,0 +1,584 @@
+.roadmap {
+  padding: 166px 77px 180px;
+  min-height: 100dvh;
+
+  @include laptop {
+    padding-top: 110px;
+  }
+  @include laptopH {
+    padding-top: 110px;
+  }
+  @include tabletSm {
+    padding: 98px 0 40px;
+  }
+
+  .title {
+    margin-bottom: 27px;
+
+    @include tabletSm {
+      margin-bottom: 23px;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    max-width: 1666px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 640px;
+    position: relative;
+    @include laptopN {
+      max-width: 1300px;
+      zoom: 0.8;
+    }
+
+    @include tabletLg {
+      display: none;
+    }
+
+    .planet-1 {
+      .planet-image {
+        width: 343px;
+        top: 38px;
+        left: -53px;
+      }
+      .planet-card {
+        top: 0;
+        left: 3px;
+      }
+
+      .planet-line {
+        bottom: calc(-100% - 61px);
+        right: -38px;
+        height: 205px;
+      }
+    }
+    .planet-2 {
+      .planet-image {
+        width: 346px;
+        top: -154px;
+        left: -77px;
+      }
+      .planet-card {
+        top: 37px;
+        left: -6px;
+      }
+
+      .planet-line {
+        bottom: 183px;
+        right: -77px;
+        height: 161px;
+      }
+    }
+    .planet-3 {
+      .planet-image {
+        width: 339px;
+        top: 81px;
+        left: -68px;
+      }
+      .planet-card {
+        top: 47px;
+        left: -14px;
+      }
+
+      .planet-line {
+        bottom: calc(-100% - 58px);
+        right: -25px;
+        height: 164px;
+
+        @include laptop {
+          right: -70px;
+        }
+      }
+    }
+    .planet-4 {
+      .planet-image {
+        width: 346px;
+        top: -98px;
+        left: -91px;
+      }
+      .planet-card {
+        bottom: -43px;
+        left: -32px;
+      }
+
+      .planet-line {
+        bottom: 181px;
+        right: -39px;
+        height: 220px;
+      }
+    }
+    .planet-5 {
+      .planet-image {
+        width: 339px;
+        top: 36px;
+        left: -93px;
+      }
+      .planet-card {
+        top: 5px;
+        left: -36px;
+      }
+
+      .planet-line {
+        bottom: calc(-100% - 60px);
+        right: 11px;
+        height: 225px;
+
+        @include laptopN {
+          right: -16px;
+        }
+      }
+    }
+    .planet-6 {
+      .planet-image {
+        width: 343px;
+        top: -155px;
+        left: -128px;
+      }
+      .planet-card {
+        top: 37px;
+        left: -51px;
+      }
+
+      .planet-line {
+        bottom: 182px;
+        right: -15px;
+        height: 172px;
+      }
+    }
+    .planet-7 {
+      .planet-image {
+        width: 341px;
+        top: 81px;
+        left: -125px;
+      }
+      .planet-card {
+        top: 47px;
+        left: -60px;
+      }
+
+      .planet-line {
+        bottom: calc(-100% - 60px);
+        right: 13px;
+        height: 168px;
+
+        @include laptopN {
+          right: -16px;
+        }
+      }
+    }
+    .planet-8 {
+      .planet-image {
+        width: 342px;
+        top: -96px;
+        left: -140px;
+      }
+      .planet-card {
+        top: 95px;
+        left: -74px;
+      }
+
+      .planet-line {
+        bottom: 182px;
+        right: 6px;
+        height: 223px;
+      }
+    }
+    .planet-9 {
+      .planet-image {
+        width: 341px;
+        top: 37px;
+        left: -136px;
+      }
+      .planet-card {
+        top: 3px;
+        left: -81px;
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    &.top {
+      justify-content: flex-start;
+    }
+    &.bottom {
+      justify-content: flex-end;
+    }
+
+    .planet-wrapper {
+      position: relative;
+      min-height: 200px;
+    }
+
+    .planet-line {
+      position: absolute;
+      z-index: -1;
+
+      img {
+        width: unset;
+        @include laptopSm {
+          width: 100%;
+        }
+      }
+    }
+
+    .planet-image {
+      position: absolute;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .planet-card {
+      position: absolute;
+      width: 226px;
+      height: 141px;
+      padding: 27px 10px 24px;
+      text-align: center;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include tabletSm {
+        width: 129px;
+        height: 78px;
+        padding: 15px 5px;
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+        color: white;
+        font-weight: 400;
+
+        @include tabletSm {
+          font-size: 14px;
+          margin-bottom: 9px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.1;
+        font-family: var(--font-overpass);
+        font-weight: 400;
+        letter-spacing: -0.6px;
+        color: white;
+        white-space: pre-line;
+        text-transform: uppercase;
+
+        @include tabletSm {
+          font-size: 10px;
+        }
+      }
+
+      .roadmap-slot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+
+  &-mobile {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include tabletLg {
+      display: grid;
+    }
+
+    @include tabletSm {
+      max-width: 390px;
+      width: 100%;
+    }
+  }
+
+  .roadmap-item-mobile {
+    &.even {
+      .planet-image {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.odd {
+      align-items: flex-end;
+      margin-left: unset;
+
+      .planet-image {
+        left: unset;
+        right: -60px;
+        @include tabletSm {
+          right: -35px;
+        }
+      }
+
+      .planet-card {
+        right: 0;
+      }
+    }
+
+    &:last-child {
+      grid-column: 1 / -1;
+      margin-left: unset;
+      align-items: center;
+    }
+
+    @include tabletSm {
+      &.planet-1 {
+        margin-left: 10px;
+      }
+      &.planet-2 {
+        margin-left: -5px;
+      }
+      &.planet-4 {
+        margin-right: 25px;
+      }
+      &.planet-5 {
+        margin-left: 25px;
+      }
+      &.planet-5 {
+        margin-right: 25px;
+      }
+      &.planet-8 {
+        margin-right: 25px;
+      }
+      &.planet-9 {
+        margin-right: -46px;
+      }
+    }
+
+    .planet-wrapper {
+      max-width: 310px;
+      width: 100%;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      @include tabletSm {
+        max-width: 138px;
+        min-height: 150px;
+      }
+    }
+
+    .planet-image {
+      width: 343px;
+      top: 40px;
+      z-index: 4;
+
+      @include tabletSm {
+        width: 187px;
+        top: 20px;
+      }
+    }
+
+    .planet-image {
+      left: -60px;
+    }
+
+    .planet-line {
+      top: 200px;
+      right: unset;
+
+      @include tabletSm {
+        top: 98px;
+      }
+
+      &-1 {
+        width: 280px;
+        left: 220px;
+
+        @include tabletSm {
+          width: 98px;
+          left: 118px;
+        }
+      }
+      &-2 {
+        width: 190px;
+        left: 200px;
+
+        @include tabletSm {
+          width: 94px;
+          left: 107px;
+        }
+
+        @include mobileSm {
+          left: 85px;
+        }
+      }
+
+      &-3 {
+        width: 193px;
+        right: 165px;
+
+        @include tabletSm {
+          width: 97px;
+          right: 100px;
+        }
+
+        @include mobileSm {
+          right: 76px;
+        }
+      }
+      &-4 {
+        width: 170px;
+        right: 181px;
+
+        @include tabletSm {
+          width: 94px;
+          right: 100px;
+        }
+      }
+      &-5 {
+        width: 212px;
+        left: 229px;
+        @include tabletSm {
+          width: 94px;
+          left: 109px;
+        }
+      }
+      &-6 {
+        width: 173px;
+        left: 229px;
+        @include tabletSm {
+          width: 89px;
+          left: 109px;
+        }
+
+        @include mobileSm {
+          left: 84px;
+        }
+      }
+      &-7 {
+        width: 354px;
+        right: 0;
+
+        @include tabletSm {
+          width: 179px;
+          right: 18px;
+        }
+
+        @include mobileSm {
+          right: -12px;
+        }
+      }
+      &-8 {
+        width: 200px;
+        right: 178px;
+
+        @include tabletSm {
+          width: 94px;
+          right: 100px;
+        }
+      }
+    }
+  }
+
+  .ship {
+    --start-y: -28px;
+    --start-x: -5px;
+
+    --mid-y: -12px;
+    --mid-x: 24px;
+
+    --down-y: -35px;
+    --down-x: 160px;
+
+    --end-y: 96px;
+    --end-x: 40px;
+
+    position: absolute;
+    bottom: var(--start-y);
+    left: var(--start-x);
+    width: 71px;
+    height: 71px;
+    animation-delay: 1000ms;
+    z-index: 10;
+
+    &.ship-animated {
+      animation: shipMove 2s linear forwards;
+    }
+
+    @include tabletLg {
+      --start-y: 262px;
+      --start-x: 36px;
+
+      --mid-y: 262px;
+      --mid-x: 160px;
+
+      --end-y: -38px;
+      --end-x: 94px;
+
+      &.ship-animated {
+        animation: shipMoveMobile 4s linear forwards;
+      }
+    }
+
+    @include tabletSm {
+      width: 35px;
+      height: 35px;
+
+      --start-y: 132px;
+      --start-x: 0px;
+
+      --mid-y: 132px;
+      --mid-x: 76px;
+
+      --down-y: -15px;
+      --down-x: 76px;
+
+      --end-y: -15px;
+      --end-x: 40px;
+    }
+  }
+}
+
+@keyframes shipMove {
+  0% {
+    bottom: var(--start-y);
+    left: var(--start-x);
+  }
+  25% {
+    bottom: var(--mid-y);
+    left: var(--mid-x);
+  }
+
+  100% {
+    bottom: var(--end-y);
+    left: var(--end-x);
+  }
+}
+
+@keyframes shipMoveMobile {
+  0% {
+    bottom: var(--start-y);
+    left: var(--start-x);
+  }
+  35% {
+    bottom: var(--mid-y);
+    left: var(--mid-x);
+  }
+  75% {
+    bottom: var(--down-y);
+    left: var(--down-x);
+  }
+
+  100% {
+    bottom: var(--end-y);
+    left: var(--end-x);
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "en": "en",
+  "ru": "ru",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "mine": "Mine",
+    "token": "Token",
+    "roadmap": "Roadmap",
+    "partners": "Partners",
+    "white-paper": "White paper",
+    "blog": "Blog"
+  },
+  "play": "Play",
+  "not-found": "Page not found",
+  "back-to-home": "Back to home",
+  "privacy-policy": "Privacy policy",
+  "cookie-policy": "Cookie policy",
+  "home": {
+    "title": "Drill. Loot. Repeat.\nThen fight for survival.",
+    "list1": "CosmoFox is a Telegram-native, multi-\n stage Web3 game.",
+    "list2": "Start as a space-mining fox — drilling\n planets, collecting crystals, and\n upgrading your gear.",
+    "list3": "More crystals = a bigger airdrop share."
+  },
+  "about": {
+    "title": "about COSMOFOX",
+    "list1": "CosmoFox takes you on a galactic journey that\n evolves over time. ",
+    "list2": "What begins as a simple race for resources grows\n into a richer universe with new mechanics,\n evolving gameplay, and an economy powered by\n $Zylo.",
+    "list3": "Phase 1 — a fast-paced clicker race: drill, loot\n and earn your share of the airdrop.",
+    "list4": "Phase 2 — the game expands: deeper mechanics, new\n challenges, and fresh ways to use $Zylo.",
+    "watch": "watch trailer"
+  },
+  "mine1": {
+    "title": "Diamond Dust",
+    "text1": "Common resource mined while\n drilling planets. ",
+    "text2": "Spent to upgrade and strengthen\n your drill, improving efficiency\n and unlocking new layers of progression."
+  },
+  "mine2": {
+    "title": "Ether Crystals",
+    "text1": "Premium resource with a small\n chance to drop while drilling.",
+    "text2": "Can be spent on loot boxes and\n purchases, or exchanged for\n $Zylo tokens during the Phase 1\n  airdrop."
+  },
+  "mine3": {
+    "title": "Drill",
+    "text1": "The Fox’s main tool for\n extracting resources from\n planets. ",
+    "text2": "Upgrade its parts to boost\n drilling power, speed, and gain\n access to deeper layers and\n hidden treasures."
+  },
+  "mine4": {
+    "title": "Ships",
+    "text1": "Essential for traveling between\n planets and star systems. ",
+    "text2": "Buy and upgrade ships to\n increase travel speed, improve\n energy regeneration, and expand\n your cosmic reach."
+  },
+  "token": {
+    "text1": "Use Zylo for upgrades, lootboxes, skins, and premium content",
+    "text2": "Stake Zylo for passive income and exclusive in-game bonuses",
+    "text3": "Earn Zylo in the airdrop by exchanging collected Crystals",
+    "text4": "Part of every Zylo spend is burned, increasing long-term scarcity"
+  },
+  "parthers_title": "our partners",
+  "token_vesting": "token vesting",
+  "token_zylo": "zylo token",
+  "roadmap": {
+    "title": "roadmap",
+    "listTitle1": "May 2025",
+    "listText1": "MVP Build & Company Setup",
+    "listTitle2": "Summer 2025",
+    "listText2": "Community &\n Early Access",
+    "listTitle3": "Sep 2025",
+    "listText3": "Phase 1 Launch",
+    "listTitle4": "Fall 2025",
+    "listText4": "Drill Race\n Evolution",
+    "listTitle5": "Q4 2025",
+    "listText5": "Token Presale",
+    "listTitle6": "Jan 2026",
+    "listText6": "Token Launch &\n Listing",
+    "listTitle7": "Jan 2026",
+    "listText7": "Airdrop\n Distribution",
+    "listTitle8": "Q1 2026",
+    "listText8": "Phase 2 Game\n Launch",
+    "listTitle9": "2026+",
+    "listText9": "Ecosystem Growth\n & Governance"
+  }
+}

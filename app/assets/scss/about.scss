@@ -1,0 +1,178 @@
+.about {
+  padding: 230px 65px 184px;
+  min-height: 100dvh;
+
+  @include laptop {
+    padding: 110px 30px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include laptopH {
+    padding: 110px 30px 40px;
+  }
+
+  @include tabletLg {
+    padding-top: 150px;
+  }
+
+  @include mobile {
+    padding: 125px 16px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 168px;
+
+    @include laptopH {
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    @include laptop {
+      align-items: center;
+      gap: 60px;
+    }
+
+    @include tabletLg {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+
+  &__img {
+    &--desktop {
+      display: block;
+      @include mobile {
+        display: none;
+      }
+    }
+    &--mobile {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+
+  &__left {
+    max-width: 794px;
+    width: 100%;
+
+    @include tabletLg {
+      max-width: 100%;
+    }
+    @include laptop {
+      max-width: 600px;
+    }
+
+    @include laptopH {
+      max-width: 600px;
+    }
+  }
+  &__right {
+    padding-top: 40px;
+    max-width: 586px;
+    width: 100%;
+
+    @include tabletLg {
+      max-width: 100%;
+    }
+    @include mobile {
+      padding-top: 0;
+      margin-left: 14px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    span {
+      font-size: 45px;
+      color: #37dd97;
+      display: block;
+      margin-bottom: 11px;
+      font-weight: 400;
+
+      @include laptopSm {
+        font-size: 40px;
+      }
+
+      @include tablet {
+        font-size: 35px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-bottom: 35px;
+
+    @include mobile {
+      gap: 19px;
+      margin-bottom: 17px;
+    }
+
+    li {
+      font-size: 20px;
+      font-family: var(--font-overpass);
+      color: #fff;
+      letter-spacing: -0.8px;
+
+      @include mobile {
+        font-size: 15px;
+        line-height: 1.1;
+        letter-spacing: -0.6px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    padding-left: 3px;
+
+    @include mobile {
+      padding-left: 0;
+      gap: 16px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.1;
+      color: #fff;
+      text-decoration: underline;
+      letter-spacing: -1px;
+
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__play {
+    background: transparent;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+
+    @include mobile {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
