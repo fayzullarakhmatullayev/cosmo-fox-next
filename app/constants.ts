@@ -120,3 +120,69 @@ export const tokenCharts = [
     vesting: '6-month cliff - 18-month linear vesting'
   }
 ];
+
+export const roadmap = [
+  {
+    date: 'roadmap.listTitle1',
+    text: 'roadmap.listText1',
+    planet: '/images/roadmap/planet-1.png',
+    line: '/images/roadmap/line-1.png',
+    mobileLine: '/images/roadmap/line-mobile-1.png'
+  },
+  {
+    date: 'roadmap.listTitle2',
+    text: 'roadmap.listText2',
+    planet: '/images/roadmap/planet-2.png',
+    line: '/images/roadmap/line-2.png',
+    mobileLine: '/images/roadmap/line-mobile-2.png'
+  },
+  {
+    date: 'roadmap.listTitle3',
+    text: 'roadmap.listText3',
+    planet: '/images/roadmap/planet-3.png',
+    line: '/images/roadmap/line-3.png',
+    mobileLine: '/images/roadmap/line-mobile-3.png'
+  },
+  {
+    date: 'roadmap.listTitle4',
+    text: 'roadmap.listText4',
+    planet: '/images/roadmap/planet-4.png',
+    line: '/images/roadmap/line-4.png',
+    mobileLine: '/images/roadmap/line-mobile-4.png'
+  },
+  {
+    date: 'roadmap.listTitle5',
+    text: 'roadmap.listText5',
+    planet: '/images/roadmap/planet-5.png',
+    line: '/images/roadmap/line-5.png',
+    mobileLine: '/images/roadmap/line-mobile-5.png'
+  },
+  {
+    date: 'roadmap.listTitle6',
+    text: 'roadmap.listText6',
+    planet: '/images/roadmap/planet-6.png',
+    line: '/images/roadmap/line-6.png',
+    mobileLine: '/images/roadmap/line-mobile-6.png'
+  },
+  {
+    date: 'roadmap.listTitle7',
+    text: 'roadmap.listText7',
+    planet: '/images/roadmap/planet-7.png',
+    line: '/images/roadmap/line-7.png',
+    mobileLine: '/images/roadmap/line-mobile-7.png'
+  },
+  {
+    date: 'roadmap.listTitle8',
+    text: 'roadmap.listText8',
+    planet: '/images/roadmap/planet-8.png',
+    line: '/images/roadmap/line-8.png',
+    mobileLine: '/images/roadmap/line-mobile-8.png'
+  },
+  {
+    date: 'roadmap.listTitle9',
+    text: 'roadmap.listText9',
+    planet: '/images/roadmap/planet-9.png',
+    line: null,
+    mobileLine: null
+  }
+];
