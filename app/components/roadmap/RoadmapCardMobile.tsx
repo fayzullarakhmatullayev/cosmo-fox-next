@@ -37,7 +37,7 @@ const RoadmapCardMobile = ({ item, index, t, isShipVisible, isPairEven, shipMobi
 
         {item.mobileLine && (
           <div className={`planet-line planet-line-${index + 1}`}>
-            <Image src={item.mobileLine} alt="line" width={100} height={100} quality={80} />
+            <Image src={item.mobileLine} alt="line" width={100} height={100} />
 
             {index === 1 && (
               <div ref={shipMobileRef} className={`ship ${isShipVisible ? 'ship-animated' : ''}`}>
