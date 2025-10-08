@@ -15,7 +15,7 @@ const BgWrapper = () => {
           height={1080}
         />
       </div>
-      <div className="bg-mopbile">
+      <div className="bg-mobile">
         <Image
           src="/images/all-bg-mobile.jpg"
           alt="bg"

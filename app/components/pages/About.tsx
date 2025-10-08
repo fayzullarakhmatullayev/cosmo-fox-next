@@ -41,6 +41,12 @@ const About = () => {
                 <li key={list}>{t(list)}</li>
               ))}
             </ul>
+            {/* <div className="about__footer" onClick={() => setisDialogVisible(true)}>
+              <button className="about__play">
+                <Image src="/images/about/play.png" alt="play" width={100} height={100} />
+              </button>
+              <p>{t('about.watch')}</p>
+            </div> */}
           </div>
         </div>
 
