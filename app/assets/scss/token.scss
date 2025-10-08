@@ -239,7 +239,7 @@
 
     &::after,
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 108px;
       height: 96px;
@@ -247,12 +247,12 @@
     }
 
     &::after {
-      background: url("/images/token/token-border-r.png") center no-repeat;
+      background: url('/images/token/token-border-r.png') center no-repeat;
       top: -3px;
       right: -4px;
     }
     &::before {
-      background: url("/images/token/token-border-l.png") center no-repeat;
+      background: url('/images/token/token-border-l.png') center no-repeat;
 
       bottom: -3px;
       left: -4px;
@@ -261,19 +261,19 @@
     @include tabletSm {
       &::after,
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         width: 34px;
         height: 34px;
       }
 
       &::after {
-        background: url("/images/token/token-border-right-mobile.png") center no-repeat;
+        background: url('/images/token/token-border-right-mobile.png') center no-repeat;
         top: -1px;
         right: -2px;
       }
       &::before {
-        background: url("/images/token/token-border-left-mobile.png") center no-repeat;
+        background: url('/images/token/token-border-left-mobile.png') center no-repeat;
         bottom: -1px;
         left: -2px;
       }
@@ -315,7 +315,8 @@
         /* top edge, cut before top-right */ 100% var(--clip-width),
         /* cut in top-right */ 100% 100%,
         /* bottom-right corner */ var(--clip-width) 100%,
-        /* bottom edge, cut before bottom-left */ 0% calc(100% - var(--clip-width)) /* cut in bottom-left */
+        /* bottom edge, cut before bottom-left */ 0% calc(100% - var(--clip-width))
+          /* cut in bottom-left */
       );
 
       background-color: rgba(4, 43, 78, 0.5);

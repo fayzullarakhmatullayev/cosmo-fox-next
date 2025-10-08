@@ -54,3 +54,69 @@ export const mines = [
     top: 68
   }
 ];
+
+export const tokenCards = [
+  { image: '/images/token/token-1.png', text: 'token.text1' },
+  { image: '/images/token/token-2.png', text: 'token.text2' },
+  { image: '/images/token/token-3.png', text: 'token.text3' },
+  { image: '/images/token/token-4.png', text: 'token.text4' }
+];
+
+export const tokenCharts = [
+  {
+    id: 1,
+    colors: ['#468DFF', '#005373'],
+    category: '15% Team',
+    tokens: 150,
+    vesting: '12-month cliff - 24-month linear vesting'
+  },
+  {
+    id: 2,
+    colors: ['#60FFA2', '#02CD56'],
+    category: '10% Private sale',
+    tokens: 100,
+    vesting: '1-month cliff - 12-month linear vesting'
+  },
+  {
+    id: 3,
+    colors: ['#FF7373', '#D72626'],
+    category: '15% Pre-sale',
+    tokens: 150,
+    vesting: 'No cliff - 9-month linear vesting'
+  },
+  {
+    id: 4,
+    colors: ['#E3FF66', '#EF7B00'],
+    category: '20% Marketing & Community',
+    tokens: 200,
+    vesting: '10% at tge - 12-month linear vesting'
+  },
+  {
+    id: 5,
+    colors: ['#BB68FF', '#590B99'],
+    category: '10% Liquidity & Listing',
+    tokens: 100,
+    vesting: '100% unlocked at TGE'
+  },
+  {
+    id: 6,
+    colors: ['#76FAFF', '#009196'],
+    category: '10% Treasury',
+    tokens: 100,
+    vesting: '18-month linear vesting'
+  },
+  {
+    id: 7,
+    colors: ['#7573E0', '#3E3C9E'],
+    category: '15% Play-to-earn',
+    tokens: 100,
+    vesting: '12-month linear vesting'
+  },
+  {
+    id: 8,
+    colors: ['#FEB8DF', '#EF03A4'],
+    category: '5% Advisors',
+    tokens: 50,
+    vesting: '6-month cliff - 18-month linear vesting'
+  }
+];
