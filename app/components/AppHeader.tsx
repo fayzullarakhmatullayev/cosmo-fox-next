@@ -119,7 +119,7 @@ const AppHeader = () => {
           </div>
         </div>
       </div>
-      {isMenuVisible && <MobileMenu navs={navs} onClose={handleBurgerClick} />}
+      {isMenuVisible && <MobileMenu onClose={handleBurgerClick} />}
     </header>
   );
 };

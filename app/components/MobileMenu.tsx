@@ -1,13 +1,12 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { socials } from '../constants';
+import { socials, navs } from '../constants';
 
 type Props = {
-  navs: { to: string; label: string }[];
   onClose: () => void;
 };
 
-const MobileMenu = ({ navs, onClose }: Props) => {
+const MobileMenu = ({ onClose }: Props) => {
   const t = useTranslations();
 
   const handleLinkClick = () => {

@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { YoutubeDialog } from '../';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+
+import { YoutubeDialog } from '../';
 
 const About = () => {
   const t = useTranslations();

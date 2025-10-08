@@ -1,10 +1,10 @@
 'use client';
 
-import { useConnectionSpeed } from '@/app/hooks/useConnectionSpeed';
-import { useTranslations } from 'next-intl';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import React, { useEffect, useMemo, useState } from 'react';
-import UiButton from '../UiButton';
+import { useTranslations } from 'next-intl';
+import { useConnectionSpeed, useIsIOS } from '@/app/hooks';
+import { UiButton } from '../';
 
 const Home = () => {
   const t = useTranslations();
@@ -14,16 +14,7 @@ const Home = () => {
 
   const lists = ['home.list1', 'home.list2', 'home.list3'];
 
-  const isIOS = useMemo(() => {
-    if (typeof navigator === 'undefined') {
-      return false;
-    }
-
-    return (
-      /iPad|iPhone|iPod/.test((navigator as Window['navigator']).userAgent) &&
-      !(window as any).MSStream
-    );
-  }, []);
+  const isIOS = useIsIOS();
 
   useEffect(() => {
     setIsMounted(true);
