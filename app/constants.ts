@@ -186,3 +186,33 @@ export const roadmap = [
     mobileLine: null
   }
 ];
+
+export const partners = [
+  {
+    image: '/images/partners/partner-1.png',
+    height: 47,
+    link: process.env.NEXT_PUBLIC_MEDICI_URL
+  },
+  {
+    image: '/images/partners/partner-2.png',
+    height: 43,
+    link: process.env.NEXT_PUBLIC_ICODA_URL
+  },
+  {
+    image: '/images/partners/partner-3.png',
+    height: 56,
+    link: process.env.NEXT_PUBLIC_CICADA_URL
+  },
+  {
+    image: '/images/partners/partner-4.png',
+    height: 54,
+    link: process.env.NEXT_PUBLIC_TON_URL
+  }
+];
+
+export const partnerLinks = [
+  { title: 'Cookie policy', link: process.env.NEXT_PUBLIC_COOKIE_POLICY_URL },
+  { title: 'privacy policy', link: process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL },
+  { title: 'tokenomic', link: process.env.NEXT_PUBLIC_TOKENOMIC_URL },
+  { title: 'blog', link: process.env.NEXT_PUBLIC_BLOG_URL }
+];
