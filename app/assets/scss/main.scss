@@ -1,4 +1,4 @@
-@import "mixins";
+@import 'mixins';
 
 *,
 *::before,
@@ -9,8 +9,8 @@
 }
 
 :root {
-  --font-furore: "Furore", sans-serif;
-  --font-overpass: "Overpass Mono", monospace;
+  --font-furore: 'Furore', sans-serif;
+  --font-overpass: 'Overpass Mono', monospace;
 }
 
 html {
@@ -132,16 +132,70 @@ button {
 }
 
 // Components
-@import "header";
-@import "footer";
-@import "dialog";
-@import "menu";
-@import "swiper";
+@import 'header';
+@import 'footer';
+@import 'dialog';
+@import 'menu';
+@import 'swiper';
 
 // Pages
-@import "home";
-@import "about";
-@import "mine";
-@import "token";
-@import "roadmap";
-@import "partners";
+@import 'home';
+@import 'about';
+@import 'mine';
+@import 'token';
+@import 'roadmap';
+@import 'partners';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  position: relative;
+  // overflow-x: hidden;
+  main {
+    flex: 1;
+  }
+}
+
+.ui-button {
+  clip-path: polygon(
+    6px 0%,
+    100% 0%,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    0% 100%,
+    0% 6px
+  );
+  font-size: 25px;
+  color: rgba(7, 30, 53, 1);
+  padding: 13px 38px 14px;
+  min-width: 182px;
+  background: linear-gradient(135deg, #4dfcd2, #0ab4e6);
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  @include laptop {
+    font-size: 20px;
+    min-width: 160px;
+  }
+
+  &.large {
+    padding: 24px 87px 26px 85px;
+    font-size: 30px;
+
+    @include laptop {
+      padding: 20px 70px 22px 68px;
+      font-size: 25px;
+    }
+  }
+
+  &.medium {
+    padding: 18px 45px 20px;
+    font-size: 30px;
+
+    @include laptop {
+      padding: 15px 35px 17px;
+      font-size: 25px;
+    }
+  }
+}

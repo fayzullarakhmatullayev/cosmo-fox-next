@@ -2,12 +2,13 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+
 import { startTransition, useState } from 'react';
 
 import { ArrayDownIcon, BurgerIcon, CloseIcon, LocaleIcon } from './icons';
-import UiButton from './UiButton';
-import MobileMenu from './MobileMenu';
+import { UiButton, MobileMenu } from './';
+
+import { useRouter } from 'next/navigation';
 
 const AppHeader = () => {
   const [isLocaleVisible, setIsLocaleVisible] = useState(false);
@@ -44,11 +45,7 @@ const AppHeader = () => {
 
   const handleBurgerClick = () => {
     setIsMenuVisible(!isMenuVisible);
-    if (isMenuVisible) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isMenuVisible ? 'auto' : 'hidden';
   };
 
   const goTop = () => {

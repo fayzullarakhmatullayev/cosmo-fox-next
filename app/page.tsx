@@ -1,4 +1,12 @@
-import AppHeader from './components/AppHeader';
+import { AppFooter, AppHeader, BgWrapper } from './components';
+import {
+  AboutSection,
+  HomeSection,
+  MineSection,
+  PartnersSection,
+  RoadmapSection,
+  TokenSection
+} from './components/pages';
 
 export default function Home() {
   return (
@@ -6,9 +14,15 @@ export default function Home() {
       <AppHeader />
 
       <main>
-        <h2>Main</h2>
-        {/* Main Sections */}
+        <HomeSection />
+        <AboutSection />
+        <MineSection />
+        <TokenSection />
+        <RoadmapSection />
+        <PartnersSection />
       </main>
+      <AppFooter />
+      <BgWrapper />
     </div>
   );
 }
