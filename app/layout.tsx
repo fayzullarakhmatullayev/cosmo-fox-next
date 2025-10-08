@@ -1,8 +1,17 @@
 import { NextIntlClientProvider } from 'next-intl';
 import './globals.scss';
+import { Metadata } from 'next';
 
 type Props = {
   children: React.ReactNode;
+};
+
+export const metadata: Metadata = {
+  title: 'CosmoFox',
+  description: 'CosmoFox',
+  icons: {
+    icon: '/images/logo.png'
+  }
 };
 
 export default async function RootLayout({ children }: Props) {
