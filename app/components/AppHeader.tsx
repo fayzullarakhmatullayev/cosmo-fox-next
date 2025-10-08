@@ -9,6 +9,7 @@ import { ArrayDownIcon, BurgerIcon, CloseIcon, LocaleIcon } from './icons';
 import { UiButton, MobileMenu } from './';
 
 import { useRouter } from 'next/navigation';
+import { locales, navs } from '../constants';
 
 const AppHeader = () => {
   const [isLocaleVisible, setIsLocaleVisible] = useState(false);
@@ -17,19 +18,6 @@ const AppHeader = () => {
   const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
-
-  const navs = [
-    { to: '#about', label: 'nav.about' },
-    { to: '#mine', label: 'nav.mine' },
-    { to: '#token', label: 'nav.token' },
-    { to: '#roadmap', label: 'nav.roadmap' },
-    { to: '#partners', label: 'nav.partners' }
-  ];
-
-  const locales = [
-    { code: 'en', name: 'en' },
-    { code: 'ru', name: 'ru' }
-  ];
 
   const currentLocaleName = locales.find((l) => l.code === locale)?.name || locale;
 

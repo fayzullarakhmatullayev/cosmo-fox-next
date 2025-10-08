@@ -1,16 +1,9 @@
 'use client';
 
 import React from 'react';
-import { DiscordIcon, TelegramIcon, TwitterIcon } from './icons';
+import { socials } from '../constants';
 
 const AppFooter = () => {
-  const socials = [
-    { icon: TelegramIcon, name: 'chat', width: 42, link: process.env.NEXT_PUBLIC_TG_CHAT_URL },
-    { icon: TelegramIcon, name: 'news', width: 42, link: process.env.NEXT_PUBLIC_TG_NEWS_URL },
-    { icon: DiscordIcon, name: 'discord', width: 48, link: process.env.NEXT_PUBLIC_DISCORD_URL },
-    { icon: TwitterIcon, name: 'x.com', width: 35, link: process.env.NEXT_PUBLIC_TWITTER_URL }
-  ];
-
   return (
     <footer className="footer">
       <div className="container">
