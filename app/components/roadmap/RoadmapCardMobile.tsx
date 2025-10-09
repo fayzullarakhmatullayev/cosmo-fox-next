@@ -1,4 +1,4 @@
-import { roadmap } from '@/app/constants';
+import { roadmap } from '@/constants';
 import Image from 'next/image';
 import { RefObject } from 'react';
 

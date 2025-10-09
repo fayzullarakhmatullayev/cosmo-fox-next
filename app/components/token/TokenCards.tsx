@@ -1,6 +1,6 @@
 'use client';
 
-import { tokenCards } from '@/app/constants';
+import { tokenCards } from '@/constants';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 

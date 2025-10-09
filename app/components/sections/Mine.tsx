@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 import MineCard from '../mine/MineCard';
 import { SwiperCarousel } from '../';
-import { mines } from '@/app/constants';
+import { mines } from '@/constants';
 
 const Mine = () => {
   const t = useTranslations();

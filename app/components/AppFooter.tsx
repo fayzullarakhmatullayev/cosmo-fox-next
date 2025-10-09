@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { socials } from '../constants';
+import { socials } from '../../constants';
 
 const AppFooter = () => {
   return (

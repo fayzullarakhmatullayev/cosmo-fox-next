@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ChartInnerLayerIcon, ChartTopLayerIcon } from '../icons';
 import TokenPieChart from './TokenPieChart';
-import { tokenCharts } from '@/app/constants';
+import { tokenCharts } from '@/constants';
 
 type TokenomicsItem = (typeof tokenCharts)[number];
 

@@ -1,4 +1,4 @@
-import { DiscordIcon, TelegramIcon, TwitterIcon } from './components/icons';
+import { DiscordIcon, TelegramIcon, TwitterIcon } from './app/components/icons';
 
 export const navs = [
   { to: '#about', label: 'nav.about' },

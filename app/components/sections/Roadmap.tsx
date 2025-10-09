@@ -1,6 +1,6 @@
 'use client';
 
-import { roadmap } from '@/app/constants';
+import { roadmap } from '@/constants';
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { RoadmapCard, RoadmapCardMobile } from '../roadmap';

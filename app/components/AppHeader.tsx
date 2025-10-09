@@ -9,7 +9,7 @@ import { ArrayDownIcon, BurgerIcon, CloseIcon, LocaleIcon } from './icons';
 import { UiButton, MobileMenu } from './';
 
 import { useRouter } from 'next/navigation';
-import { locales, navs } from '../constants';
+import { locales, navs } from '../../constants';
 
 const AppHeader = () => {
   const [isLocaleVisible, setIsLocaleVisible] = useState(false);

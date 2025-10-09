@@ -1,6 +1,6 @@
 'use client';
 
-import { partnerLinks, partners } from '@/app/constants';
+import { partnerLinks, partners } from '@/constants';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';

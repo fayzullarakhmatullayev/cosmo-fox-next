@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { socials, navs } from '../constants';
+import { socials, navs } from '../../constants';
 
 type Props = {
   onClose: () => void;
