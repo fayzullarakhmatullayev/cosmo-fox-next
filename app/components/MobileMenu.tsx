@@ -22,10 +22,10 @@ const MobileMenu = ({ onClose }: Props) => {
           </a>
         ))}
 
-        <a href="config.public.whitePaperUrl" target="_blank">
+        <a href={process.env.NEXT_PUBLIC_WHITE_PAPER_URL} target="_blank">
           {t('nav.white-paper')}
         </a>
-        <a href="config.public.blogUrl" target="_blank">
+        <a href={process.env.NEXT_PUBLIC_BLOG_URL} target="_blank">
           {t('nav.blog')}
         </a>
       </nav>
