@@ -1,19 +1,11 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface NetworkConnection extends EventTarget {
-  readonly effectiveType?: 'slow-2g' | '2g' | '3g' | '4g';
+  readonly effectiveType?: "slow-2g" | "2g" | "3g" | "4g";
   readonly saveData?: boolean;
   readonly downlink?: number;
   readonly rtt?: number;
-  readonly type?:
-    | 'bluetooth'
-    | 'cellular'
-    | 'ethernet'
-    | 'wifi'
-    | 'wimax'
-    | 'none'
-    | 'other'
-    | 'unknown';
+  readonly type?: "bluetooth" | "cellular" | "ethernet" | "wifi" | "wimax" | "none" | "other" | "unknown";
 }
 
 declare global {
@@ -22,7 +14,7 @@ declare global {
   }
 }
 
-type ConnectionType = 'slow-2g' | '2g' | '3g' | 'slow-4g' | '4g' | 'unknown';
+type ConnectionType = "slow-2g" | "2g" | "3g" | "slow-4g" | "4g" | "unknown";
 
 interface UseConnectionSpeedReturn {
   isSlowConnection: boolean;
@@ -33,9 +25,9 @@ interface UseConnectionSpeedReturn {
 
 export const useConnectionSpeed = (): UseConnectionSpeedReturn => {
   const [isSlowConnection, setIsSlowConnection] = useState<boolean>(false);
-  const [connectionType, setConnectionType] = useState<ConnectionType>('unknown');
+  const [connectionType, setConnectionType] = useState<ConnectionType>("unknown");
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const slowConnections = useRef<ConnectionType[]>(['slow-2g', '2g', '3g', 'slow-4g']);
+  const slowConnections = useRef<ConnectionType[]>(["slow-2g", "2g", "3g", "slow-4g"]);
 
   const testSpeed = useCallback(async (): Promise<number> => {
     try {
@@ -43,12 +35,12 @@ export const useConnectionSpeed = (): UseConnectionSpeedReturn => {
 
       // Test with favicon or small resource
       const response = await fetch(`/favicon.ico?${Math.random()}`, {
-        cache: 'no-cache',
-        mode: 'cors'
+        cache: "no-cache",
+        mode: "cors"
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
 
       await response.blob();
@@ -63,7 +55,7 @@ export const useConnectionSpeed = (): UseConnectionSpeedReturn => {
 
       return speedKbps;
     } catch (error) {
-      console.warn('Speed test failed:', error);
+      console.warn("Speed test failed:", error);
       // Default to slow connection on error
       setIsSlowConnection(true);
       return 0;
@@ -71,37 +63,35 @@ export const useConnectionSpeed = (): UseConnectionSpeedReturn => {
   }, []);
 
   useEffect(() => {
-    if ('connection' in navigator && navigator.connection) {
+    if ("connection" in navigator && navigator.connection) {
       const connection = navigator.connection;
-      setConnectionType(connection.effectiveType || 'unknown');
+      setConnectionType(connection.effectiveType || "unknown");
 
       const isSlow =
-        slowConnections.current.includes(connection.effectiveType as ConnectionType) ||
-        Boolean(connection.saveData);
+        slowConnections.current.includes(connection.effectiveType as ConnectionType) || Boolean(connection.saveData);
       setIsSlowConnection(isSlow);
 
       const handleConnectionChange = (): void => {
         if (connection.effectiveType) {
           setConnectionType(connection.effectiveType);
           const isSlow =
-            slowConnections.current.includes(connection.effectiveType as ConnectionType) ||
-            Boolean(connection.saveData);
+            slowConnections.current.includes(connection.effectiveType as ConnectionType) || Boolean(connection.saveData);
           setIsSlowConnection(isSlow);
         }
       };
 
-      connection.addEventListener('change', handleConnectionChange);
+      connection.addEventListener("change", handleConnectionChange);
 
       setIsLoading(false);
 
       // Cleanup function for component unmount
       return () => {
-        connection.removeEventListener('change', handleConnectionChange);
+        connection.removeEventListener("change", handleConnectionChange);
       };
     } else {
       // Fallback: assume fast connection if API not available
       setIsSlowConnection(false);
-      setConnectionType('unknown');
+      setConnectionType("unknown");
       setIsLoading(false);
     }
   }, []);

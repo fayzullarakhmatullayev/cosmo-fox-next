@@ -1,3 +1,3 @@
-import { useIsIOS } from './useIsIOS';
-import { useConnectionSpeed } from './useConnectionSpeed';
-export { useIsIOS, useConnectionSpeed };
+import { useConnectionSpeed } from "./useConnectionSpeed";
+import { useIsIOS } from "./useIsIOS";
+export { useConnectionSpeed, useIsIOS };

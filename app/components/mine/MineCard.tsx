@@ -1,6 +1,5 @@
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import React from 'react';
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 type Mine = {
   image: string;
@@ -16,7 +15,7 @@ type Props = {
   className?: string;
 };
 
-const MineCard = ({ mine, className = '' }: Props) => {
+const MineCard = ({ mine, className = "" }: Props) => {
   const t = useTranslations();
   return (
     <div className={`mine__card ${className}`}>
@@ -29,17 +28,8 @@ const MineCard = ({ mine, className = '' }: Props) => {
         </ul>
       </div>
       <div className="mine__card--picture">
-        <Image
-          src={mine.slot}
-          alt="mine-slot"
-          width={100}
-          height={100}
-          className="mine__card--slot"
-        />
-        <div
-          className="mine__card--image"
-          style={{ width: `${mine.imageSize}px`, top: `${mine.top}px` }}
-        >
+        <Image src={mine.slot} alt="mine-slot" width={100} height={100} className="mine__card--slot" />
+        <div className="mine__card--image" style={{ width: `${mine.imageSize}px`, top: `${mine.top}px` }}>
           <Image src={mine.image} alt="mine" width={100} height={100} />
         </div>
       </div>

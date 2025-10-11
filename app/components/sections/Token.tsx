@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { TokenCards, TokenCharts } from '../token';
+import { TokenCards, TokenCharts } from "../token";
 
 const Token = () => {
   return (

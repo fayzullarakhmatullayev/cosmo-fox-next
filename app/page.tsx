@@ -1,12 +1,5 @@
-import { AppFooter, AppHeader, BgWrapper } from './components';
-import {
-  AboutSection,
-  HomeSection,
-  MineSection,
-  PartnersSection,
-  RoadmapSection,
-  TokenSection
-} from './components/sections';
+import { AppFooter, AppHeader, BgWrapper } from "./components";
+import { AboutSection, HomeSection, MineSection, PartnersSection, RoadmapSection, TokenSection } from "./components/sections";
 
 export default function Home() {
   return (

@@ -1,18 +1,17 @@
-'use client';
+"use client";
 
-import { partnerLinks, partners } from '@/constants';
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import React from 'react';
-import { LinkWhiteIcon } from '../icons';
+import { PARTNERS, PARTNERS_LINKS } from "@/constants";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { LinkWhiteIcon } from "../../assets/icons";
 
 const Partners = () => {
   const t = useTranslations();
   return (
     <section id="partners" className="partners">
-      <h2 className="title">{t('parthers_title')}</h2>
+      <h2 className="title">{t("parthers_title")}</h2>
       <div className="partners__wrapper">
-        {partners.map((card, i) => (
+        {PARTNERS.map((card, i) => (
           <a href={card.link} key={i} className="partners__card" target="_blank">
             <Image
               src={card.image}
@@ -33,7 +32,7 @@ const Partners = () => {
         ))}
       </div>
       <div className="partners__links">
-        {partnerLinks.map((item, i) => (
+        {PARTNERS_LINKS.map((item, i) => (
           <a key={i} href={item.link} target="_blank">
             <span>{item.title}</span> <LinkWhiteIcon />
           </a>

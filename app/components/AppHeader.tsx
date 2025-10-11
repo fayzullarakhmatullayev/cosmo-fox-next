@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useLocale, useTranslations } from 'next-intl';
-import Image from 'next/image';
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 
-import { startTransition, useState } from 'react';
+import { startTransition, useState } from "react";
 
-import { ArrayDownIcon, BurgerIcon, CloseIcon, LocaleIcon } from './icons';
-import { UiButton, MobileMenu } from './';
+import { ArrayDownIcon, BurgerIcon, CloseIcon, LocaleIcon } from "../assets/icons";
+import { MobileMenu, UiButton } from "./";
 
-import { useRouter } from 'next/navigation';
-import { locales, navs } from '../../constants';
+import { LOCALES, NAVS } from "@/constants";
+import { useRouter } from "next/navigation";
 
 const AppHeader = () => {
   const [isLocaleVisible, setIsLocaleVisible] = useState(false);
@@ -19,7 +19,7 @@ const AppHeader = () => {
   const locale = useLocale();
   const router = useRouter();
 
-  const currentLocaleName = locales.find((l) => l.code === locale)?.name || locale;
+  const currentLocaleName = LOCALES.find(l => l.code === locale)?.name || locale;
 
   const handleLocaleChange = (newLocale: string) => {
     setIsLocaleVisible(false);
@@ -33,7 +33,7 @@ const AppHeader = () => {
 
   const handleBurgerClick = () => {
     setIsMenuVisible(!isMenuVisible);
-    document.body.style.overflow = isMenuVisible ? 'auto' : 'hidden';
+    document.body.style.overflow = isMenuVisible ? "auto" : "hidden";
   };
 
   const goTop = () => {
@@ -51,16 +51,16 @@ const AppHeader = () => {
             </a>
             {/* Nav Items */}
             <nav className="header__nav--links">
-              {navs.map((nav) => (
+              {NAVS.map(nav => (
                 <a href={nav.to} key={nav.label}>
                   {t(nav.label)}
                 </a>
               ))}
               <a href={process.env.NEXT_PUBLIC_WHITE_PAPER_URL} target="_blank">
-                {t('nav.white-paper')}
+                {t("nav.white-paper")}
               </a>
               <a href={process.env.NEXT_PUBLIC_BLOG_URL} target="_blank">
-                {t('nav.blog')}
+                {t("nav.blog")}
               </a>
             </nav>
           </div>
@@ -74,35 +74,29 @@ const AppHeader = () => {
               rel="noopener noreferrer"
               className="header__right--btn"
             >
-              {t('play')}
+              {t("play")}
             </UiButton>
 
             {/* Language Selector */}
             <div className="header__lang">
               {/* Desktop View - Selected Language */}
-              <div
-                className="header__lang--selected"
-                onClick={() => setIsLocaleVisible(!isLocaleVisible)}
-              >
+              <div className="header__lang--selected" onClick={() => setIsLocaleVisible(!isLocaleVisible)}>
                 <ArrayDownIcon />
                 <span>{t(currentLocaleName)}</span>
               </div>
 
               {/* Mobile View - Globe Icon */}
-              <div
-                className="header__lang--icon"
-                onClick={() => setIsLocaleVisible(!isLocaleVisible)}
-              >
+              <div className="header__lang--icon" onClick={() => setIsLocaleVisible(!isLocaleVisible)}>
                 <LocaleIcon />
               </div>
 
               {/* Language Dropdown */}
               {isLocaleVisible && (
                 <div className="header__lang--list">
-                  {locales.map((l) => (
+                  {LOCALES.map(l => (
                     <button
                       key={l.code}
-                      className={l.code === locale ? 'active' : ''}
+                      className={l.code === locale ? "active" : ""}
                       onClick={() => handleLocaleChange(l.code)}
                     >
                       {t(l.name)}

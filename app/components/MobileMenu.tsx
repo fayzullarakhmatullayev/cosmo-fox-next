@@ -1,6 +1,5 @@
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { socials, navs } from '../../constants';
+import { NAVS, SOCIALS } from "@/constants";
+import { useTranslations } from "next-intl";
 
 type Props = {
   onClose: () => void;
@@ -16,28 +15,22 @@ const MobileMenu = ({ onClose }: Props) => {
   return (
     <div className="mobile__menu">
       <nav className="mobile__menu--links">
-        {navs.map(({ to, label }) => (
+        {NAVS.map(({ to, label }) => (
           <a key={label} href={to} onClick={handleLinkClick}>
             {t(label)}
           </a>
         ))}
 
         <a href={process.env.NEXT_PUBLIC_WHITE_PAPER_URL} target="_blank">
-          {t('nav.white-paper')}
+          {t("nav.white-paper")}
         </a>
         <a href={process.env.NEXT_PUBLIC_BLOG_URL} target="_blank">
-          {t('nav.blog')}
+          {t("nav.blog")}
         </a>
       </nav>
       <div className="mobile__menu--social">
-        {socials.map(({ icon: Icon, name, width, link }) => (
-          <a
-            key={name}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__social--item"
-          >
+        {SOCIALS.map(({ icon: Icon, name, width, link }) => (
+          <a key={name} href={link} target="_blank" rel="noopener noreferrer" className="footer__social--item">
             <div style={{ width }}>
               <Icon />
             </div>

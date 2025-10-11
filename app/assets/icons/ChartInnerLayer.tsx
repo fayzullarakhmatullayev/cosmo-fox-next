@@ -1,14 +1,6 @@
-import React from 'react';
-
 const ChartInnerLayer = () => {
   return (
-    <svg
-      width="247"
-      height="247"
-      viewBox="0 0 247 247"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="247" height="247" viewBox="0 0 247 247" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M38.6283 110.36C41.4031 92.4368 49.7809 75.8522 62.5608 62.9831C75.3407 50.114 91.8666 41.6211 109.77 38.7216"
         stroke="#45F18C"

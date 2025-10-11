@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ChartInnerLayerIcon, ChartTopLayerIcon } from '../icons';
-import TokenPieChart from './TokenPieChart';
-import { tokenCharts } from '@/constants';
+import { TOKEN_CHARTS } from "@/constants";
+import { useTranslations } from "next-intl";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { ChartInnerLayerIcon, ChartTopLayerIcon } from "../../assets/icons";
+import TokenPieChart from "./TokenPieChart";
 
-type TokenomicsItem = (typeof tokenCharts)[number];
+type TokenomicsItem = (typeof TOKEN_CHARTS)[number];
 
 const TokenCharts = () => {
   const t = useTranslations();
@@ -30,15 +30,15 @@ const TokenCharts = () => {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <div className="token-charts">
-      <h2 className="title">{t('token_vesting')}</h2>
+      <h2 className="title">{t("token_vesting")}</h2>
       <div className="charts__wrapper">
         <div className="chart-container">
           <div className="chart-top-layer">
@@ -49,8 +49,8 @@ const TokenCharts = () => {
           </div>
           <TokenPieChart
             ref={pieChartRef}
-            key={`${tokenCharts.length}-${isMobileScreen}`}
-            items={tokenCharts}
+            key={`${TOKEN_CHARTS.length}-${isMobileScreen}`}
+            items={TOKEN_CHARTS}
             isMobile={isMobileScreen}
             hoveredItem={hoveredItem}
             onHoveredItemChange={setHoveredItem}
@@ -72,12 +72,12 @@ const TokenCharts = () => {
                   <td></td>
                   <td></td>
                 </tr>
-                {tokenCharts.map((item) => (
+                {TOKEN_CHARTS.map(item => (
                   <tr
                     key={item.id}
                     onMouseEnter={() => handleTableRowHover(item)}
                     onMouseLeave={handleTableRowLeave}
-                    className={item.id === hoveredItem?.id ? 'active' : ''}
+                    className={item.id === hoveredItem?.id ? "active" : ""}
                   >
                     <td>
                       <div className="table-color-wrapper">

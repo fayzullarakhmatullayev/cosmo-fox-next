@@ -1,16 +1,16 @@
-import { NextIntlClientProvider } from 'next-intl';
-import './globals.scss';
-import { Metadata } from 'next';
+import { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import "./globals.scss";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export const metadata: Metadata = {
-  title: 'CosmoFox',
-  description: 'CosmoFox',
+  title: "CosmoFox",
+  description: "CosmoFox",
   icons: {
-    icon: '/images/logo.png'
+    icon: "/images/logo.png"
   }
 };
 

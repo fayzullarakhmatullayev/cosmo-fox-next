@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 type Props = {
   children: React.ReactNode;
-  variant?: 'small' | 'large' | 'medium' | undefined;
+  variant?: "small" | "large" | "medium" | undefined;
   href?: string | undefined;
   target?: string | undefined;
   rel?: string | undefined;
@@ -10,15 +10,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const UiButton = ({
-  children,
-  variant = 'small',
-  href = '#',
-  target = '_self',
-  className = '',
-  rel,
-  onClick
-}: Props) => {
+const UiButton = ({ children, variant = "small", href = "#", target = "_self", className = "", rel, onClick }: Props) => {
   const clickHandler = (e: React.MouseEvent) => {
     if (onClick) {
       e.preventDefault();
@@ -26,13 +18,7 @@ const UiButton = ({
     }
   };
   return (
-    <a
-      className={`ui-button ${className} ${variant}`}
-      href={href}
-      target={target}
-      rel={rel}
-      onClick={clickHandler}
-    >
+    <a className={`ui-button ${className} ${variant}`} href={href} target={target} rel={rel} onClick={clickHandler}>
       {children}
     </a>
   );

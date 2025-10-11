@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import React from "react";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { NextIcon, PrevIcon } from './icons';
+import { NextIcon, PrevIcon } from "../assets/icons";
 
 interface SwiperCarouselProps<T> {
   items: T[];
@@ -17,11 +17,11 @@ export default function SwiperCarousel<T>({ items, renderItem }: SwiperCarouselP
       <Swiper
         modules={[Navigation, Pagination]}
         navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
         }}
         pagination={{
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true
         }}
         breakpoints={{

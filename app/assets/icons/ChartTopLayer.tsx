@@ -1,14 +1,6 @@
-import React from 'react';
-
 const ChartTopLayer = () => {
   return (
-    <svg
-      width="365"
-      height="365"
-      viewBox="0 0 365 365"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="365" height="365" viewBox="0 0 365 365" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M36.8288 289.113C14.3144 258.35 2.11683 221.249 1.98425 183.128C1.85166 145.007 13.7909 107.822 36.0907 76.9033"
         stroke="#45F18C"

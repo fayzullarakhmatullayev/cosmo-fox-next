@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { roadmap } from '@/constants';
-import { useTranslations } from 'next-intl';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { RoadmapCard, RoadmapCardMobile } from '../roadmap';
+import { ROADMAP } from "@/constants";
+import { useTranslations } from "next-intl";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { RoadmapCard, RoadmapCardMobile } from "../roadmap";
 
 const Roadmap = () => {
   const t = useTranslations();
@@ -13,7 +13,7 @@ const Roadmap = () => {
   const [isShipVisible, setIsShipVisible] = useState(false);
 
   const processedRoadmap = useMemo(() => {
-    const result = [...roadmap];
+    const result = [...ROADMAP];
 
     for (let i = 0; i < result.length; i += 2) {
       if (i + 1 < result.length && !isPairEven(i)) {
@@ -32,8 +32,8 @@ const Roadmap = () => {
     if (!roadmapRef.current) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             setIsShipVisible(true);
           }
@@ -41,7 +41,7 @@ const Roadmap = () => {
       },
       {
         threshold: 0.3,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: "0px 0px -100px 0px"
       }
     );
 
@@ -55,19 +55,12 @@ const Roadmap = () => {
   return (
     <section id="roadmap" ref={roadmapRef} className="roadmap">
       <div className="container">
-        <div className="title">{t('roadmap.title')}</div>
+        <div className="title">{t("roadmap.title")}</div>
 
         {/* Desktop Roadmap */}
         <div className="roadmap-wrapper">
-          {roadmap.map((item, i) => (
-            <RoadmapCard
-              key={i}
-              item={item}
-              index={i}
-              t={t}
-              isShipVisible={isShipVisible}
-              shipRef={shipRef}
-            />
+          {ROADMAP.map((item, i) => (
+            <RoadmapCard key={i} item={item} index={i} t={t} isShipVisible={isShipVisible} shipRef={shipRef} />
           ))}
         </div>
 
